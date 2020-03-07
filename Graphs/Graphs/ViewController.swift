@@ -10,12 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var progressView: PRProgressView!{
-        didSet{
-            progressView.strokeRatio = 0.1
-        }
-    }
-    
+    @IBOutlet weak var progressView: PRProgressView!
     @IBOutlet weak var progressSlider: UISlider!
     
     override func viewDidLoad() {

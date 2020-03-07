@@ -10,7 +10,7 @@ import UIKit
 
 class PRProgressView: UIView {
     
-    public var strokeRatio: CGFloat = 0.2
+    public var innerDiameter: CGFloat = 170
     public var strokeColor: UIColor = UIColor(red:0.24, green:0.87, blue:0.59, alpha:1.0)
     public var baseColor: UIColor = UIColor.black.withAlphaComponent(0.05)
     public var originPosition: PRProgressViewOriginPosition = .top
@@ -25,7 +25,7 @@ class PRProgressView: UIView {
         baseShape.path = UIBezierPath(arcCenter: CGPoint(x: radius, y: radius), radius: radius, startAngle: originPosition.startAngle, endAngle: originPosition.endAngle, clockwise: true).cgPath
         baseShape.position = CGPoint(x: radius, y: radius)
         baseShape.strokeColor = baseColor.cgColor
-        baseShape.lineWidth = self.bounds.size.width * strokeRatio
+        baseShape.lineWidth = (self.bounds.size.width - innerDiameter)/2
         baseShape.fillColor = UIColor.clear.cgColor
         self.layer.addSublayer(baseShape)
         
