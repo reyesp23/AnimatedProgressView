@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Graphs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uip-RC-9YY" customClass="PRProgressView" customModule="Graphs" customModuleProvider="target">
+                                <rect key="frame" x="107" y="253" width="200" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="KQN-FA-cgc"/>
+                                    <constraint firstAttribute="height" constant="200" id="OaX-kw-bez"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4CT-Ad-g5O">
+                                <rect key="frame" x="141.5" y="596" width="131" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="GDM-il-SaI"/>
+                                    <constraint firstAttribute="height" constant="65" id="Got-n0-qVM"/>
+                                </constraints>
+                                <state key="normal" title="Animate"/>
+                                <connections>
+                                    <action selector="animateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="023-iJ-nMK"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="qDt-NV-j8E">
+                                <rect key="frame" x="38" y="536" width="338" height="31"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4CT-Ad-g5O" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Geo-Sr-Rr0"/>
+                            <constraint firstItem="uip-RC-9YY" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-100" id="KOV-Qb-a6f"/>
+                            <constraint firstItem="qDt-NV-j8E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="KjC-MS-2VH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qDt-NV-j8E" secondAttribute="trailing" constant="40" id="NJn-M0-BS7"/>
+                            <constraint firstItem="4CT-Ad-g5O" firstAttribute="top" secondItem="qDt-NV-j8E" secondAttribute="bottom" constant="30" id="g35-sd-PMr"/>
+                            <constraint firstItem="uip-RC-9YY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="g4i-GJ-B48"/>
+                            <constraint firstItem="qDt-NV-j8E" firstAttribute="top" secondItem="uip-RC-9YY" secondAttribute="bottom" constant="83" id="sXh-zP-ic5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="progressSlider" destination="qDt-NV-j8E" id="UI2-i2-JyL"/>
+                        <outlet property="progressView" destination="uip-RC-9YY" id="Zj8-TA-YgD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
