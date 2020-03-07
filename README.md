@@ -1,4 +1,4 @@
 # AnimatedProgressView
 Animated circular progress bar 
 
-![Animated Progress](animatedProgress.gif)
+<img src="animatedProgress.gif" width="200">
